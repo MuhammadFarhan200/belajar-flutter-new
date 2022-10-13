@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_apps/container.dart';
+import 'package:movie_apps/rowColumn.dart';
+import 'package:movie_apps/row_column.dart';
 
 void main() {
-  runApp(const ContainerWidget());
+  runApp(RowColumn());
 }
 
 class MyApp extends StatelessWidget {

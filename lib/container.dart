@@ -1,5 +1,6 @@
+import 'package:movie_apps/containerDua.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:movie_apps/latihanContainer.dart';
 
 class ContainerWidget extends StatelessWidget {
   const ContainerWidget({Key? key}) : super(key: key);
@@ -7,43 +8,28 @@ class ContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Belajar Container',
+      title: "Belajar Container",
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-            centerTitle: true,
-            title: Text(
-              'Container Widget',
-              style: GoogleFonts.montserrat(),
-            )),
-        body: Container(
-          color: Colors.blueAccent,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                alignment: Alignment.center,
-                margin: EdgeInsets.only(bottom: 20.0),
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: AssetImage('assets/images/fantasy-wallpaper.jpg'),
-                        fit: BoxFit.cover),
-                    borderRadius: BorderRadius.circular(10.0)),
-                height: 200,  
-                width: 300,
-              ),
-              Container(
-                child: Center(
-                  child: Text(
-                    'Ini adalah Container',
-                    style: GoogleFonts.montserrat(
-                        color: Colors.white, fontSize: 20),
-                  ),
-                ),
-              ),
-            ],
-          ),
+          // backgroundColor: Colors.black87,
+          centerTitle: true,
+          title: Text("Container Widget"),
         ),
+        // body: Container(
+        //   margin: EdgeInsets.all(20),
+        //   transform: Matrix4.rotationZ(0.1),
+        //   height: 200,
+        //   width: 200,
+        //   decoration: BoxDecoration(
+        //     borderRadius: BorderRadius.circular(10),
+        //     color: Colors.blueAccent,
+        //   ),
+        //   child: Center(
+        //     child: Text("ini adalah container"),
+        //   ),
+        // ),
+        body: LatihanContainer(),
       ),
     );
   }
