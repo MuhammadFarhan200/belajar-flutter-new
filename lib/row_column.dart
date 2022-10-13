@@ -8,13 +8,15 @@ class RowColumn extends StatelessWidget {
     return MaterialApp(
         title: 'Belajar Row Column',
         debugShowCheckedModeBanner: false,
+        theme: ThemeData(fontFamily: 'Montserrat'),
         home: Scaffold(
             appBar: AppBar(
               centerTitle: true,
               title: Text('Belajar Row & Column'),
             ),
             body: SafeArea(
-                child: Row(children: [
+                child:
+                    Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Container(
                   height: 100,
                   width: 100,
