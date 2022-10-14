@@ -3,11 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_apps/column.dart';
 import 'package:movie_apps/container.dart';
 import 'package:movie_apps/latihan2.dart';
+import 'package:movie_apps/latihan3.dart';
 import 'package:movie_apps/rowColumn.dart';
 import 'package:movie_apps/row_column.dart';
 
 void main() {
-  runApp(Latihan2());
+  runApp(Latihan3());
 }
 
 class MyApp extends StatelessWidget {

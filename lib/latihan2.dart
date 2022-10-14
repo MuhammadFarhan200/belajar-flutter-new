@@ -23,7 +23,7 @@ class Latihan2 extends StatelessWidget {
                   children: [
                     Container(
                         child: Text(
-                      'Fantasy Wallpaper',
+                      'Webtoon',
                       style: TextStyle(fontSize: 30),
                     )),
                     Container(
@@ -32,7 +32,7 @@ class Latihan2 extends StatelessWidget {
                             color: Colors.blueAccent,
                             image: DecorationImage(
                                 image: AssetImage(
-                                    'assets/images/fantasy-wallpaper.jpg'),
+                                    'assets/images/choi-jungmin.jpg'),
                                 fit: BoxFit.cover),
                             borderRadius: BorderRadius.circular(10)),
                         height: 300,
