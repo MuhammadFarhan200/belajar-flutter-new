@@ -15,18 +15,17 @@ class Latihan2 extends StatelessWidget {
             centerTitle: true,
           ),
           body: SafeArea(
-              child: ListView(children: [
+              child: ListView(padding: EdgeInsets.all(20), children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Column(
                   children: [
                     Container(
-                        margin: EdgeInsets.only(top: 20),
                         child: Text(
-                          'Fantasy Wallpaper',
-                          style: TextStyle(fontSize: 30),
-                        )),
+                      'Fantasy Wallpaper',
+                      style: TextStyle(fontSize: 30),
+                    )),
                     Container(
                         margin: EdgeInsets.all(10),
                         decoration: BoxDecoration(
