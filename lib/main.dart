@@ -22,16 +22,22 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Apps',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-          appBar: AppBar(
-            // backgroundColor: Colors.black87,
-            centerTitle: true,
-            title: Text('Learn Flutter', style: GoogleFonts.montserrat()),
+        appBar: AppBar(
+          // backgroundColor: Colors.black87,
+          centerTitle: true,
+          title: Text(
+            'Learn Flutter',
+            style: GoogleFonts.montserrat(),
           ),
-          body: Center(
-            child: Text('Hello Flutter \n Saya Hanztt',
-                style: GoogleFonts.montserrat(
-                    fontSize: 24, fontStyle: FontStyle.italic)),
-          )),
+        ),
+        body: Center(
+          child: Text(
+            'Hello Flutter \n Saya Hanztt',
+            style: GoogleFonts.montserrat(
+                fontSize: 24, fontStyle: FontStyle.italic),
+          ),
+        ),
+      ),
     );
   }
 }
