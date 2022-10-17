@@ -26,8 +26,8 @@ class _ContohStackState extends State<ContohStack> {
                     image: DecorationImage(
                       // image: NetworkImage(
                       //     'https://cdn.pixabay.com/photo/2020/10/04/18/13/mountains-5627143_1280.jpg'),
-                      image: AssetImage('assets/images/choi-jungmin.jpg'),
-                      fit: BoxFit.fitHeight,
+                      image: AssetImage('assets/images/sci-fi-wallpaper-1.jpg'),
+                      fit: BoxFit.cover,
                       alignment: Alignment.topCenter
                     ),
                   ),
@@ -35,17 +35,46 @@ class _ContohStackState extends State<ContohStack> {
                 Positioned(
                   right: 40,
                   top: 100,
-                  child: Text(
-                    date.hour.toString() + ':' + date.minute.toString(),
-                    style: TextStyle(color: Colors.white, fontSize: 45),
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text(
+                      date.hour.toString() + ':' + date.minute.toString() + ':' + date.second.toString(),
+                      style: TextStyle(color: Colors.white, fontSize: 45),
+                    ),
                   ),
                 ),
                 Positioned(
                   right: 40,
-                  top: 150,
-                  child: Text(
-                    'Hello, Morning!',
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  top: 180,
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text(
+                      date.year.toString() + '-' + date.month.toString() + '-' + date.day.toString(),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  right: 40,
+                  top: 230,
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    child: Text(
+                      'Hello, how are you?',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
                   ),
                 ),
                 Positioned(
@@ -76,7 +105,7 @@ class _ContohStackState extends State<ContohStack> {
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 8, left: 16, bottom: 32),
-                          child: Text('Arima Kousei'),
+                          child: Text('Issei Nugroho'),
                         )
                       ],
                     ),
