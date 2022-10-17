@@ -38,11 +38,11 @@ class _ContohStackState extends State<ContohStack> {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.black26,
-                      borderRadius: BorderRadius.circular(10)
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
-                      date.hour.toString() + ':' + date.minute.toString() + ':' + date.second.toString(),
+                      date.hour.toString() + ':' + date.minute.toString(),
                       style: TextStyle(color: Colors.white, fontSize: 45),
                     ),
                   ),
@@ -53,26 +53,11 @@ class _ContohStackState extends State<ContohStack> {
                   child: Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.black26,
-                      borderRadius: BorderRadius.circular(10)
+                      color: Colors.black12,
+                      borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
-                      date.year.toString() + '-' + date.month.toString() + '-' + date.day.toString(),
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  right: 40,
-                  top: 230,
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Colors.black26,
-                      borderRadius: BorderRadius.circular(10)
-                    ),
-                    child: Text(
-                      'Hello, how are you?',
+                      'Hello, Morning!',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
@@ -100,12 +85,14 @@ class _ContohStackState extends State<ContohStack> {
                           padding: const EdgeInsets.only(
                               top: 0, left: 16, right: 16, bottom: 8),
                           child: Text(
-                              'Para Wibu memiliki senjata paling ampuh yang bisa digunakan untuk menghancurkan dunia.'),
+                            'Para Wibu memiliki senjata paling ampuh yang bisa digunakan untuk menghancurkan dunia.',
+                            textAlign: TextAlign.justify,  
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 8, left: 16, bottom: 32),
-                          child: Text('Issei Nugroho'),
+                          child: Text('Siapa aja'),
                         )
                       ],
                     ),
