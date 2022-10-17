@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_apps/column.dart';
 import 'package:movie_apps/container.dart';
+import 'package:movie_apps/contohStack.dart';
 import 'package:movie_apps/latihan2.dart';
 import 'package:movie_apps/latihan3.dart';
 import 'package:movie_apps/rowColumn.dart';
 import 'package:movie_apps/row_column.dart';
+import 'package:movie_apps/stack.dart';
 
 void main() {
-  runApp(Latihan3());
+  runApp(ContohStack());
 }
 
 class MyApp extends StatelessWidget {
