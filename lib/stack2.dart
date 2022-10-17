@@ -24,12 +24,12 @@ class _ContohStackState extends State<ContohStack> {
                 Container(
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      // image: NetworkImage(
-                      //     'https://cdn.pixabay.com/photo/2020/10/04/18/13/mountains-5627143_1280.jpg'),
-                      image: AssetImage('assets/images/sci-fi-wallpaper-1.jpg'),
-                      fit: BoxFit.cover,
-                      alignment: Alignment.topCenter
-                    ),
+                        // image: NetworkImage(
+                        //     'https://cdn.pixabay.com/photo/2020/10/04/18/13/mountains-5627143_1280.jpg'),
+                        image:
+                            AssetImage('assets/images/sci-fi-wallpaper-1.jpg'),
+                        fit: BoxFit.cover,
+                        alignment: Alignment.topCenter),
                   ),
                 ),
                 Positioned(
@@ -86,13 +86,13 @@ class _ContohStackState extends State<ContohStack> {
                               top: 0, left: 16, right: 16, bottom: 8),
                           child: Text(
                             'Para Wibu memiliki senjata paling ampuh yang bisa digunakan untuk menghancurkan dunia.',
-                            textAlign: TextAlign.justify,  
+                            textAlign: TextAlign.justify,
                           ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(
                               top: 8, left: 16, bottom: 32),
-                          child: Text('Siapa aja'),
+                          child: Text('Wibu Sejati'),
                         )
                       ],
                     ),
