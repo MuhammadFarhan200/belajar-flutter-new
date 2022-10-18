@@ -64,25 +64,34 @@ class _LatihanCounterState extends State<LatihanCounter> {
                   children: [
                     Container(
                       margin: EdgeInsets.only(bottom: 20, right: 5),
-                      child: FloatingActionButton(
-                        backgroundColor: Colors.redAccent,
-                        onPressed: () {
-                          if (_counter < 1) {
-                            showSnackBar();
-                          } else {
-                            _decrementCounter();
-                          }
-                        },
-                        tooltip: 'Dicrement',
-                        child: const Icon(Icons.remove),
+                      child: SizedBox(
+                        width: 50,
+                        height: 50,
+                        child: FloatingActionButton(
+                          backgroundColor: Colors.red,
+                          onPressed: () {
+                            if (_counter < 1) {
+                              showSnackBar('Angka tidak bisa dikurangi lebih dari ini!');
+                            } else {
+                              _decrementCounter();
+                            }
+                          },
+                          tooltip: 'Dicrement',
+                          child: const Icon(Icons.remove),
+                        ),
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(bottom: 20, left: 5),
-                      child: FloatingActionButton(
-                        onPressed: _incrementCounter,
-                        tooltip: 'Increment',
-                        child: const Icon(Icons.add),
+                      child: SizedBox(
+                        width: 50,
+                        height: 50,
+                        child: FloatingActionButton(
+                          backgroundColor: Colors.black54,
+                          onPressed: _incrementCounter,
+                          tooltip: 'Increment',
+                          child: const Icon(Icons.add),
+                        ),
                       ),
                     ),
                   ],
@@ -95,13 +104,13 @@ class _LatihanCounterState extends State<LatihanCounter> {
     );
   }
 
-  showSnackBar() {
+  showSnackBar(text) {
     var snackBar = SnackBar(
       elevation: 0,
       backgroundColor: Colors.transparent,
       content: AwesomeSnackbarContent(
         title: 'OPPS',
-        message: 'Angka tidak bisa dikurangi lebih dari ini!',
+        message: text,
         contentType: ContentType.failure,
       ),
     );
