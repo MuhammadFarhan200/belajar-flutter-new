@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
-class LatihanCounter extends StatefulWidget {
-  const LatihanCounter({Key? key}) : super(key: key);
+class CounterLatihan extends StatefulWidget {
+  const CounterLatihan({Key? key}) : super(key: key);
 
   @override
-  _LatihanCounterState createState() => _LatihanCounterState();
+  _CounterLatihanState createState() => _CounterLatihanState();
 }
 
-class _LatihanCounterState extends State<LatihanCounter> {
+class _CounterLatihanState extends State<CounterLatihan> {
+  final GlobalKey<ScaffoldState> _globalKey = new GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = new GlobalKey<ScaffoldMessengerState>();
   int _counter = 0;
 
   void _incrementCounter() {
@@ -25,15 +28,17 @@ class _LatihanCounterState extends State<LatihanCounter> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      scaffoldMessengerKey: _scaffoldKey,
       title: 'Counter',
       theme: ThemeData(fontFamily: 'Montserrat'),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
+      home: new Scaffold(
+        // key: _globalKey,
         appBar: AppBar(
           title: Text('Counter'),
           centerTitle: true,
         ),
-        body: SafeArea(
+        body: new SafeArea(
           child: Container(
             child: Center(
               child: Column(
@@ -65,16 +70,7 @@ class _LatihanCounterState extends State<LatihanCounter> {
               child: FloatingActionButton(
                 onPressed: () {
                   if (_counter == 0) {
-                    showDialog(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return AlertDialog(
-                          title: Text(
-                            "Angka Mencapai 0, Anda Tidak Bisa Mengurangi Lagi Angka!",
-                          ),
-                        );
-                      },
-                    );
+                    return showSnackbar('Angka sudah tidak bisa dikurangi');
                   } else {
                     return _decrementCounter();
                   }
@@ -95,5 +91,11 @@ class _LatihanCounterState extends State<LatihanCounter> {
         ),
       ),
     );
+  }
+  showSnackbar(text) {
+    final snackbar = SnackBar(
+      content: Text(text),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackbar);
   }
 }

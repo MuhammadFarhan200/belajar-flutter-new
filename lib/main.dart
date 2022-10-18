@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_apps/column.dart';
 import 'package:movie_apps/container.dart';
 import 'package:movie_apps/counter.dart';
+import 'package:movie_apps/latihanCounter.dart';
 import 'package:movie_apps/stack2.dart';
 import 'package:movie_apps/latihan2.dart';
 import 'package:movie_apps/latihan3.dart';
@@ -13,7 +14,7 @@ import 'package:movie_apps/row_column.dart';
 import 'package:movie_apps/stack.dart';
 
 void main() {
-  runApp(LatihanCounter());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,26 +24,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
     return MaterialApp(
-      theme: ThemeData.dark(),
+      theme: ThemeData(fontFamily: 'Montserrat'),
       title: 'Flutter Apps',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          // backgroundColor: Colors.black87,
-          centerTitle: true,
-          title: Text(
-            'Learn Flutter',
-            style: GoogleFonts.montserrat(),
-          ),
-        ),
-        body: Center(
-          child: Text(
-            'Hello Flutter \n Saya Hanztt',
-            style: GoogleFonts.montserrat(
-                fontSize: 24, fontStyle: FontStyle.italic),
-          ),
-        ),
-      ),
+      home: LatihanCounter(),
     );
   }
 }
