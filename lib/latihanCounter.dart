@@ -39,13 +39,11 @@ class _LatihanCounterState extends State<LatihanCounter> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
+                margin: EdgeInsets.only(bottom: 10),
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   'Klik salah satu tombol dibawah untuk mengubah angka.',
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+                  style: TextStyle(fontSize: 18, color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
               ),
