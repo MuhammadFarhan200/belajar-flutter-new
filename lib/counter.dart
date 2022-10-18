@@ -61,7 +61,7 @@ class _LatihanCounterState extends State<LatihanCounter> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.all(5),
+              margin: EdgeInsets.only(bottom: 20, right: 5),
               child: FloatingActionButton(
                 onPressed: () {
                   if (_counter == 0) {
@@ -84,7 +84,7 @@ class _LatihanCounterState extends State<LatihanCounter> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: EdgeInsets.only(bottom: 20, left: 5),
               child: FloatingActionButton(
                 onPressed: _incrementCounter,
                 tooltip: 'Increment',
