@@ -57,7 +57,7 @@ class _ContohStackState extends State<ContohStack> {
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: Text(
-                      'Hello, Morning!',
+                      'Hello, where are you?',
                       style: TextStyle(color: Colors.white, fontSize: 18),
                     ),
                   ),
