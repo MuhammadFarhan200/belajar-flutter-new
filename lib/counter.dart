@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class CounterLatihan extends StatefulWidget {
   const CounterLatihan({Key? key}) : super(key: key);
@@ -9,8 +9,7 @@ class CounterLatihan extends StatefulWidget {
 }
 
 class _CounterLatihanState extends State<CounterLatihan> {
-  final GlobalKey<ScaffoldState> _globalKey = new GlobalKey<ScaffoldState>();
-  final GlobalKey<ScaffoldMessengerState> _scaffoldKey = new GlobalKey<ScaffoldMessengerState>();
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   int _counter = 0;
 
   void _incrementCounter() {
@@ -27,52 +26,58 @@ class _CounterLatihanState extends State<CounterLatihan> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      scaffoldMessengerKey: _scaffoldKey,
-      title: 'Counter',
-      theme: ThemeData(fontFamily: 'Montserrat'),
-      debugShowCheckedModeBanner: false,
-      home: new Scaffold(
-        // key: _globalKey,
-        appBar: AppBar(
-          title: Text('Counter'),
-          centerTitle: true,
-        ),
-        body: new SafeArea(
-          child: Container(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      'Klik salah satu tombol untuk mengubah angka dibawah',
-                      style: TextStyle(fontSize: 20),
-                      textAlign: TextAlign.center,
-                    ),
+    return Scaffold(
+      key: _scaffoldKey,
+      appBar: AppBar(
+        title: Text('Counter'),
+        centerTitle: true,
+      ),
+      body: new SafeArea(
+        child: Container(
+          color: Colors.blue,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                  Text(
-                    '$_counter',
-                    style: TextStyle(fontSize: 35),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    'Klik salah satu tombol dibawah untuk mengubah angka.',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    textAlign: TextAlign.center,
                   ),
-                ],
-              ),
+                ),
+                Text(
+                  '$_counter',
+                  style: TextStyle(fontSize: 35, color: Colors.white),
+                ),
+              ],
             ),
           ),
         ),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: Row(
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        width: 200,
+        padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white30),
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: EdgeInsets.all(5),
+              margin: EdgeInsets.only(bottom: 20, right: 5),
               child: FloatingActionButton(
+                backgroundColor: Colors.redAccent,
                 onPressed: () {
                   if (_counter < 1) {
-                    return showSnackbar('Angka sudah tidak bisa dikurangi');
+                    showSnackBar();
                   } else {
-                    return _decrementCounter();
+                    _decrementCounter();
                   }
                 },
                 tooltip: 'Dicrement',
@@ -80,7 +85,7 @@ class _CounterLatihanState extends State<CounterLatihan> {
               ),
             ),
             Container(
-              margin: EdgeInsets.all(5),
+              margin: EdgeInsets.only(bottom: 20, left: 5),
               child: FloatingActionButton(
                 onPressed: _incrementCounter,
                 tooltip: 'Increment',
@@ -92,10 +97,17 @@ class _CounterLatihanState extends State<CounterLatihan> {
       ),
     );
   }
-  showSnackbar(text) {
-    final snackbar = SnackBar(
-      content: Text(text),
+
+  showSnackBar() {
+    var snackBar = SnackBar(
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      content: AwesomeSnackbarContent(
+        title: 'OPPS',
+        message: 'Angka tidak bisa dikurangi lebih dari ini!',
+        contentType: ContentType.failure,
+      ),
     );
-    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }
