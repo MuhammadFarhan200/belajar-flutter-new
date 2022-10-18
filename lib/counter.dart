@@ -69,7 +69,7 @@ class _CounterLatihanState extends State<CounterLatihan> {
               margin: EdgeInsets.all(5),
               child: FloatingActionButton(
                 onPressed: () {
-                  if (_counter == 0) {
+                  if (_counter < 1) {
                     return showSnackbar('Angka sudah tidak bisa dikurangi');
                   } else {
                     return _decrementCounter();

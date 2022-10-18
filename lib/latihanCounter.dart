@@ -1,7 +1,5 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:awesome_snackbar_content/awesome_snackbar_content.dart';
 
 class LatihanCounter extends StatefulWidget {
   const LatihanCounter({Key? key}) : super(key: key);
@@ -36,61 +34,80 @@ class _LatihanCounterState extends State<LatihanCounter> {
       ),
       body: new SafeArea(
         child: Container(
+          color: Colors.blue,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   padding: EdgeInsets.symmetric(horizontal: 20),
                   child: Text(
-                    'Klik salah satu tombol untuk mengubah angka dibawah.',
-                    style: TextStyle(fontSize: 20),
+                    'Klik salah satu tombol dibawah untuk mengubah angka.',
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                     textAlign: TextAlign.center,
                   ),
                 ),
                 Text(
                   '$_counter',
-                  style: TextStyle(fontSize: 35),
+                  style: TextStyle(fontSize: 35, color: Colors.white),
                 ),
               ],
             ),
           ),
         ),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            margin: EdgeInsets.only(bottom: 20, right: 5),
-            child: FloatingActionButton(
-              backgroundColor: Colors.redAccent,
-              onPressed: () {
-                if (_counter < 1) {
-                  showSnackBar('Angka telah mencapai 0. \nAngka tidak bisa dikurangi lebih dari ini!');
-                } else {
-                  _decrementCounter();
-                }
-              },
-              tooltip: 'Dicrement',
-              child: const Icon(Icons.remove),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Container(
+        width: 200,
+        padding: EdgeInsets.only(top: 20, right: 20, left: 20),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.white30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              margin: EdgeInsets.only(bottom: 20, right: 5),
+              child: FloatingActionButton(
+                backgroundColor: Colors.redAccent,
+                onPressed: () {
+                  if (_counter < 1) {
+                    showSnackBar();
+                  } else {
+                    _decrementCounter();
+                  }
+                },
+                tooltip: 'Dicrement',
+                child: const Icon(Icons.remove),
+              ),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.only(bottom: 20, left: 5),
-            child: FloatingActionButton(
-              onPressed: _incrementCounter,
-              tooltip: 'Increment',
-              child: const Icon(Icons.add),
+            Container(
+              margin: EdgeInsets.only(bottom: 20, left: 5),
+              child: FloatingActionButton(
+                onPressed: _incrementCounter,
+                tooltip: 'Increment',
+                child: const Icon(Icons.add),
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 
-  showSnackBar(text) {
-    final snackbar = SnackBar(content: Text(text, style: TextStyle(fontFamily: 'Montserrat'),));
-    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+  showSnackBar() {
+    var snackBar = SnackBar(
+      elevation: 0,
+      backgroundColor: Colors.transparent,
+      content: AwesomeSnackbarContent(
+        title: 'OPPS',
+        message: 'Angka tidak bisa dikurangi lebih dari ini!',
+        contentType: ContentType.failure,
+      ),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
 }
