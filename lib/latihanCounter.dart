@@ -49,7 +49,7 @@ class _LatihanCounterState extends State<LatihanCounter> {
               ),
               Text(
                 '$_counter',
-                style: TextStyle(fontSize: 35, color: Colors.white),
+                style: TextStyle(fontSize: 20 + double.parse(_counter.toString()), color: Colors.white),
               ),
               Container(
                 margin: EdgeInsets.only(top: 20),
