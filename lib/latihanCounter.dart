@@ -71,7 +71,8 @@ class _LatihanCounterState extends State<LatihanCounter> {
                           backgroundColor: Colors.red,
                           onPressed: () {
                             if (_counter < 1) {
-                              showSnackBar('Angka tidak bisa dikurangi lebih dari ini!');
+                              showSnackBar(
+                                  'Angka tidak bisa dikurangi lebih dari ini!');
                             } else {
                               _decrementCounter();
                             }
