@@ -20,7 +20,7 @@ class _LatihanListViewState extends State<LatihanListView> {
         child: ListView(
           children: [
             Container(
-              margin: EdgeInsets.all(10),
+              margin: EdgeInsets.only(top: 20, left: 10, right: 10, bottom: 10),
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
                 image: DecorationImage(
@@ -127,14 +127,14 @@ class _LatihanListViewState extends State<LatihanListView> {
             ),
             Container(
               margin: EdgeInsets.all(10),
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Text(
                 'Hanztt',
-                style: TextStyle(color: Colors.white),
+                style: TextStyle(color: Colors.white, fontSize: 18),
                 textAlign: TextAlign.center,
               ),
             )

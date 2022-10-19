@@ -60,10 +60,10 @@ class _LatihanCounterState extends State<LatihanCounter> {
                   color: Colors.white30,
                 ),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(bottom: 20, right: 5),
+                      margin: EdgeInsets.only(bottom: 20),
                       child: SizedBox(
                         width: 50,
                         height: 50,
@@ -83,7 +83,7 @@ class _LatihanCounterState extends State<LatihanCounter> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(bottom: 20, left: 5),
+                      margin: EdgeInsets.only(bottom: 20),
                       child: SizedBox(
                         width: 50,
                         height: 50,
