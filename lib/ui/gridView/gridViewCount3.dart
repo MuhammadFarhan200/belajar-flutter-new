@@ -21,7 +21,7 @@ class _GridViewCount3State extends State<GridViewCount3> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Grid View',
+      title: 'Latihan Grid View',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Montserrat'),
       home: Scaffold(
