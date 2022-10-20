@@ -26,7 +26,7 @@ class _GridViewCount3State extends State<GridViewCount3> {
       theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Montserrat'),
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Grid View'),
+          title: const Text('Latihan Grid View'),
           centerTitle: true,
         ),
         body: SafeArea(
@@ -36,37 +36,38 @@ class _GridViewCount3State extends State<GridViewCount3> {
               crossAxisCount: 2,
               mainAxisSpacing: 8,
               crossAxisSpacing: 8,
-              children: list.map(
-                (e) => ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Stack(
-                    children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.3),
-                          image: DecorationImage(image: NetworkImage(e.thumbnail()))
-                        ),
+              children: list
+                  .map(
+                    (e) => ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Stack(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Colors.grey.withOpacity(0.3),
+                              image: DecorationImage(
+                                image: NetworkImage(e.thumbnail()),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            child: Container(
+                              height: 32,
+                              width: double.maxFinite,
+                              color: Colors.black45,
+                            ),
+                          ),
+                          Positioned(
+                            left: 8,
+                            bottom: 8,
+                            child: Text(e.author),
+                          ),
+                        ],
                       ),
-                      Positioned(
-                        bottom: 0,
-                        child: Container(
-                          padding: EdgeInsets.all(5),
-                          height: 32,
-                          width: double.maxFinite,
-                          color: Colors.black45,
-                        child: Text(e.author),
-                        ),
-                      ),
-                      // Positioned(
-                      //   left: 8,
-                      //   bottom: 8,
-                      //   child: Text(e.author),
-                      // ),
-                    ],
-                  ),
-                ),
-              )
-              .toList(),
+                    ),
+                  )
+                  .toList(),
             ),
           ),
         ),
