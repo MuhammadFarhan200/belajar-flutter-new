@@ -1,7 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:movie_apps/ui/gridView/gridInGrid.dart';
+import 'package:movie_apps/ui/gridView/gridViewCount.dart';
 import 'package:movie_apps/ui/gridView/gridViewCount3.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Montserrat'),
       title: 'Flutter Apps',
       debugShowCheckedModeBanner: false,
-      home: GridViewCount3(),
+      home: GridInGrid(),
     );
   }
 }

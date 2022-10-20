@@ -51,7 +51,7 @@ class _GridInGridState extends State<GridInGrid> {
               SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
           children: [
             GridView.count(
-              crossAxisCount: 3,
+              crossAxisCount: 2,
               scrollDirection: Axis.horizontal,
               padding: EdgeInsets.all(20),
               children: List.generate(alphabet.length, (index) {
