@@ -1,6 +1,5 @@
-import 'package:movie_apps/containerDua.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_apps/latihanContainer.dart';
+import 'package:movie_apps/ui/container/latihanContainer.dart';
 
 class ContainerWidget extends StatelessWidget {
   const ContainerWidget({Key? key}) : super(key: key);

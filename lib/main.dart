@@ -2,10 +2,10 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movie_apps/latihanListView.dart';
+import 'package:movie_apps/ui/gridView/gridViewCount3.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(GridViewCount3());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Montserrat'),
       title: 'Flutter Apps',
       debugShowCheckedModeBanner: false,
-      home: LatihanListView(),
+      home: GridViewCount3(),
     );
   }
 }
