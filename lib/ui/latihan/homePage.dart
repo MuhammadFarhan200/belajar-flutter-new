@@ -44,86 +44,110 @@ class _HomePageState extends State<HomePage> {
         child: Container(
           padding: EdgeInsets.all(10),
           child: GridView.count(
-              crossAxisSpacing: 5,
-              mainAxisSpacing: 5,
-              crossAxisCount: 2,
+            crossAxisSpacing: 5,
+            mainAxisSpacing: 5,
+            crossAxisCount: 2,
             children: [
               Card(
-                child: IconButton(
-                  iconSize: 50,
-                  onPressed: () {
+                child: InkWell(
+                  onTap: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page1(),
                     );
                     Navigator.push(context, route);
                   },
-                  tooltip: 'Technology',
-                  icon: Icon(Icons.laptop),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.laptop, size: 50),
+                      Text('Technology'),
+                    ],
+                  ),
                 ),
               ),
               Card(
-                child: IconButton(
-                  iconSize: 50,
-                  onPressed: () {
+                child: InkWell(
+                  onTap: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page2(),
                     );
                     Navigator.push(context, route);
                   },
-                  tooltip: 'Bookshelf',
-                  icon: Icon(Icons.menu_book_sharp),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.menu_book, size: 50),
+                      Text('Bookshelf'),
+                    ],
+                  ),
                 ),
               ),
               Card(
-                child: IconButton(
-                  iconSize: 50,
-                  onPressed: () {
+                child: InkWell(
+                  onTap: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page3(),
                     );
                     Navigator.push(context, route);
                   },
-                  tooltip: 'Art',
-                  icon: Icon(Icons.art_track),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.art_track, size: 50),
+                      Text('Sci-fi Art'),
+                    ],
+                  ),
                 ),
               ),
               Card(
-                child: IconButton(
-                  iconSize: 50,
-                  onPressed: () {
+                child: InkWell(
+                  onTap: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page4(),
                     );
                     Navigator.push(context, route);
                   },
-                  tooltip: 'Fantasy',
-                  icon: Icon(Icons.wallpaper_rounded),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.image, size: 50),
+                      Text('Fantasy'),
+                    ],
+                  ),
                 ),
               ),
               Card(
-                child: IconButton(
-                  iconSize: 50,
-                  onPressed: () {
+                child: InkWell(
+                  onTap: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page5(),
                     );
                     Navigator.push(context, route);
                   },
-                  tooltip: 'Food',
-                  icon: Icon(Icons.food_bank_outlined),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.food_bank_outlined, size: 50),
+                      Text('Food'),
+                    ],
+                  ),
                 ),
               ),
               Card(
-                child: IconButton(
-                  iconSize: 50,
-                  onPressed: () {
+                child: InkWell(
+                  onTap: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page6(),
                     );
                     Navigator.push(context, route);
                   },
-                  tooltip: 'Webtoon',
-                  icon: Icon(Icons.animation_sharp),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.animation_sharp, size: 50),
+                      Text('Webtoon'),
+                    ],
+                  ),
                 ),
               ),
             ],
