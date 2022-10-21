@@ -12,7 +12,7 @@ class _Page6State extends State<Page6> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 6'),
+        title: Text('Webtoon'),
         centerTitle: true,
       ),
       body: SafeArea(

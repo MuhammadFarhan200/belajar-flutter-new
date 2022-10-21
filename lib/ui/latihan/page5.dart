@@ -12,7 +12,7 @@ class _Page5State extends State<Page5> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 5'),
+        title: Text('Food'),
         centerTitle: true,
       ),
       body: SafeArea(

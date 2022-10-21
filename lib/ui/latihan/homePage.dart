@@ -42,18 +42,15 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(20),
-          child: GridView(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          padding: EdgeInsets.all(10),
+          child: GridView.count(
               crossAxisSpacing: 5,
               mainAxisSpacing: 5,
               crossAxisCount: 2,
-            ),
             children: [
               Card(
                 child: IconButton(
                   iconSize: 50,
-                  hoverColor: Colors.black12,
                   onPressed: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page1(),
@@ -67,7 +64,6 @@ class _HomePageState extends State<HomePage> {
               Card(
                 child: IconButton(
                   iconSize: 50,
-                  hoverColor: Colors.black12,
                   onPressed: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page2(),
@@ -81,7 +77,6 @@ class _HomePageState extends State<HomePage> {
               Card(
                 child: IconButton(
                   iconSize: 50,
-                  hoverColor: Colors.black12,
                   onPressed: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page3(),
@@ -95,7 +90,6 @@ class _HomePageState extends State<HomePage> {
               Card(
                 child: IconButton(
                   iconSize: 50,
-                  hoverColor: Colors.black12,
                   onPressed: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page4(),
@@ -109,7 +103,6 @@ class _HomePageState extends State<HomePage> {
               Card(
                 child: IconButton(
                   iconSize: 50,
-                  hoverColor: Colors.black12,
                   onPressed: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page5(),
@@ -123,7 +116,6 @@ class _HomePageState extends State<HomePage> {
               Card(
                 child: IconButton(
                   iconSize: 50,
-                  hoverColor: Colors.black12,
                   onPressed: () {
                     Route route = MaterialPageRoute(
                       builder: (context) => Page6(),
