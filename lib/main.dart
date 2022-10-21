@@ -3,9 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_apps/ui/gridView/gridInGrid.dart';
 import 'package:movie_apps/ui/gridView/gridViewCount.dart';
 import 'package:movie_apps/ui/gridView/gridViewCount3.dart';
+import 'package:movie_apps/ui/latihan/homePage.dart';
 
 void main() {
-  runApp(GridViewCount3());
+  runApp(HomeRoute());
 }
 
 class MyApp extends StatelessWidget {
