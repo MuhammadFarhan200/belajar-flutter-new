@@ -85,7 +85,7 @@ class _FirstScreenContentState extends State<FirstScreenContent> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 10),
-                height: 40,
+                height: 45,
                 child: ElevatedButton(
                   onPressed: () => _showCupertinoDialog(
                     context,

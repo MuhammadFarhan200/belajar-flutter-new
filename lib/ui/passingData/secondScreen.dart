@@ -55,7 +55,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   margin: EdgeInsets.only(bottom: 5),
                   decoration: BoxDecoration(
                     color: Colors.blue,
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
                     child: Text(
@@ -69,7 +69,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   margin: EdgeInsets.only(top: 5),
                   decoration: BoxDecoration(
                     color: Colors.blue,
-                    borderRadius: BorderRadius.circular(50),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Center(
                     child: Text(
