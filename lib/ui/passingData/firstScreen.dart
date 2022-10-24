@@ -144,7 +144,7 @@ void _showCupertinoDialog(BuildContext context, String nama, String kelas) {
           CupertinoDialogAction(
             child: Text(
               'Tidak',
-              style: TextStyle(fontFamily: 'Montserrat'),
+              style: TextStyle(fontFamily: 'Montserrat', color: Colors.red),
             ),
             onPressed: () {
               Navigator.pop(context);

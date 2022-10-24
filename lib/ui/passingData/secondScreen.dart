@@ -4,8 +4,11 @@ import 'package:movie_apps/ui/passingData/firstScreen.dart';
 class SecondScreen extends StatefulWidget {
   final String nama;
   final String kelas;
-  const SecondScreen({Key? key, required this.nama, required this.kelas})
-      : super(key: key);
+  const SecondScreen({
+    Key? key,
+    required this.nama,
+    required this.kelas,
+  }) : super(key: key);
 
   @override
   State<SecondScreen> createState() => _SecondScreenState();
@@ -23,15 +26,17 @@ class _SecondScreenState extends State<SecondScreen> {
           title: Text('Second Screen'),
           centerTitle: true,
           leading: IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => FirstScreen(),
-                  ),
-                );
-              },
-              icon: Icon(Icons.arrow_back_ios_new_rounded)),
+            tooltip: 'Kembali',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => FirstScreen(),
+                ),
+              );
+            },
+            icon: Icon(Icons.arrow_back_ios_new_rounded),
+          ),
         ),
         body: SafeArea(
           child: Container(
