@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:movie_apps/ui/gridView/gridInGrid.dart';
-import 'package:movie_apps/ui/gridView/gridViewCount.dart';
-import 'package:movie_apps/ui/gridView/gridViewCount3.dart';
-import 'package:movie_apps/ui/latihan/homePage.dart';
+import 'package:movie_apps/ui/passingData/firstScreen.dart';
 
 void main() {
-  runApp(HomeRoute());
+  runApp(FirstScreen());
 }
 
 class MyApp extends StatelessWidget {
