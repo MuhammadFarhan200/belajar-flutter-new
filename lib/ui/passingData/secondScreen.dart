@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_apps/ui/passingData/firstScreen.dart';
 
 class SecondScreen extends StatefulWidget {
   final String nama;
@@ -23,7 +24,12 @@ class _SecondScreenState extends State<SecondScreen> {
           centerTitle: true,
           leading: IconButton(
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => FirstScreen(),
+                  ),
+                );
               },
               icon: Icon(Icons.arrow_back_ios_new_rounded)),
         ),

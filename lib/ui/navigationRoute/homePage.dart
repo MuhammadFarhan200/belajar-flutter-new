@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movie_apps/ui/latihan/page1.dart';
-import 'package:movie_apps/ui/latihan/page2.dart';
-import 'package:movie_apps/ui/latihan/page3.dart';
-import 'package:movie_apps/ui/latihan/page4.dart';
-import 'package:movie_apps/ui/latihan/page5.dart';
-import 'package:movie_apps/ui/latihan/page6.dart';
+import 'package:movie_apps/ui/navigationRoute/page1.dart';
+import 'package:movie_apps/ui/navigationRoute/page2.dart';
+import 'package:movie_apps/ui/navigationRoute/page3.dart';
+import 'package:movie_apps/ui/navigationRoute/page4.dart';
+import 'package:movie_apps/ui/navigationRoute/page5.dart';
+import 'package:movie_apps/ui/navigationRoute/page6.dart';
 
 class HomeRoute extends StatefulWidget {
   const HomeRoute({Key? key}) : super(key: key);
