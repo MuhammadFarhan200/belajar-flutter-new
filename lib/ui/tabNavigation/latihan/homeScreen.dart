@@ -82,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Row(
                         children: [
                           Container(
-                            width: 75,
+                            width: 95,
                             decoration: BoxDecoration(
                               color: Colors.blueAccent,
                               borderRadius: BorderRadius.circular(10),
@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Row(
                         children: [
                           Container(
-                            width: 75,
+                            width: 95,
                             decoration: BoxDecoration(
                               color: Colors.blueAccent,
                               borderRadius: BorderRadius.circular(10),
