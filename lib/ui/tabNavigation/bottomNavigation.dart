@@ -28,6 +28,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
         appBar: AppBar(
           title: Text('Bottom Navigation'),
           centerTitle: true,
+          backgroundColor: Colors.blueAccent,
         ),
         body: SafeArea(
           child: _listPage[_selectedNavbar],

@@ -11,7 +11,7 @@ class _TabBarNavigationState extends State<TabBarNavigation> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: MaterialApp(
         title: 'Tab Navigation',
         theme: ThemeData(fontFamily: 'Montserrat'),
@@ -29,6 +29,9 @@ class _TabBarNavigationState extends State<TabBarNavigation> {
                 Tab(
                   icon: Icon(Icons.info),
                 ),
+                Tab(
+                  icon: Icon(Icons.contact_mail),
+                ),
               ],
             ),
           ),
@@ -44,6 +47,12 @@ class _TabBarNavigationState extends State<TabBarNavigation> {
                 Center(
                   child: Text(
                     'Halaman Info',
+                    style: TextStyle(fontSize: 24),
+                  ),
+                ),
+                Center(
+                  child: Text(
+                    'Halaman Contact',
                     style: TextStyle(fontSize: 24),
                   ),
                 ),
