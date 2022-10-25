@@ -31,49 +31,106 @@ class _HomeScreenState extends State<HomeScreen> {
             padding: EdgeInsets.all(20),
             children: [
               Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                 decoration: BoxDecoration(
-                  color: Colors.blueAccent,
+                  color: Colors.deepPurpleAccent,
                   borderRadius: BorderRadius.circular(10),
                 ),
                 height: 200,
-                child: GridView.count(
-                  crossAxisCount: 1,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10,
+                child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
                     Container(
-                      width: deviceWidth * 0.4,
+                      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                      height: 100,
                       decoration: BoxDecoration(
                         color: Colors.blueAccent,
                         borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/nasi-goreng-2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 75,
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/choi-jungmin.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Text(
+                              'Lorem ipsum',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
-                      width: deviceWidth * 0.4,
+                      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                      height: 100,
                       decoration: BoxDecoration(
                         color: Colors.blueAccent,
                         borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/nasi-goreng-2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 75,
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/choi-jungmin.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Text(
+                              'Lorem ipsum',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                     Container(
-                      width: deviceWidth * 0.4,
+                      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+                      height: 100,
                       decoration: BoxDecoration(
                         color: Colors.blueAccent,
                         borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/nasi-goreng-2.jpg'),
-                          fit: BoxFit.cover,
-                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 75,
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: AssetImage(
+                                    'assets/images/choi-jungmin.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.all(20),
+                            child: Text(
+                              'Lorem ipsum',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -81,36 +138,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Container(
                 margin: EdgeInsets.only(top: 10, bottom: 5),
-                height: 100,
-                decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 75,
-                      decoration: BoxDecoration(
-                        color: Colors.blueAccent,
-                        borderRadius: BorderRadius.circular(10),
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/choi-jungmin.jpg'),
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(20),
-                      child: Text(
-                        'Lorem ipsum',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 5),
                 height: 100,
                 decoration: BoxDecoration(
                   color: Colors.blueAccent,
