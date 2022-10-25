@@ -21,6 +21,12 @@ class _ProfilScreenState extends State<ProfilScreen> {
           padding: EdgeInsets.all(20),
           children: [
             Container(
+              child: Text(
+                'Profil Anda:',
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Container(
               margin: EdgeInsets.symmetric(vertical: 5),
               height: 175,
               decoration: BoxDecoration(
@@ -64,7 +70,10 @@ class _ProfilScreenState extends State<ProfilScreen> {
                 color: Colors.blueAccent,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Text('Alamat : Kp. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, error', style: TextStyle(color: Colors.white),),
+              child: Text(
+                'Alamat : Kp. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate, error',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),

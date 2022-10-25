@@ -22,6 +22,13 @@ class _DaftarWisataState extends State<DaftarWisata> {
           children: [
             Container(
               margin: EdgeInsets.symmetric(vertical: 5),
+              child: Text(
+                'Daftar Tempat Wisata yang Tersedia:',
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 5),
               height: 100,
               decoration: BoxDecoration(
                 color: Colors.blueAccent,
