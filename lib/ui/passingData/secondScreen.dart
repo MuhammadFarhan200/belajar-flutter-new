@@ -57,11 +57,9 @@ class _SecondScreenState extends State<SecondScreen> {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Nama : ' + widget.nama,
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
+                  child: Text(
+                    'Nama : ' + widget.nama,
+                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
                 Container(
@@ -71,11 +69,9 @@ class _SecondScreenState extends State<SecondScreen> {
                     color: Colors.blue,
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Center(
-                    child: Text(
-                      'Kelas : ' + widget.kelas,
-                      style: TextStyle(color: Colors.white, fontSize: 16),
-                    ),
+                  child: Text(
+                    'Kelas : ' + widget.kelas,
+                    style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
               ],
