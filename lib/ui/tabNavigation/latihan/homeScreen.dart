@@ -62,9 +62,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           Container(
+                            width: deviceWidth * 0.5,
                             padding: EdgeInsets.all(20),
                             child: Text(
-                              'Lorem ipsum',
+                              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, qui.',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
@@ -93,9 +94,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           Container(
+                            width: deviceWidth * 0.5,
                             padding: EdgeInsets.all(20),
                             child: Text(
-                              'Lorem ipsum',
+                              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, qui.',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
@@ -124,9 +126,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                           Container(
+                            width: deviceWidth * 0.5,
                             padding: EdgeInsets.all(20),
                             child: Text(
-                              'Lorem ipsum',
+                              'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit, qui.',
                               style: TextStyle(color: Colors.white),
                             ),
                           ),
