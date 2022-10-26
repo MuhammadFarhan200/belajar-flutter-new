@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:movie_apps/ui/contohAPI/contohAPI.dart';
+import 'package:movie_apps/ui/tabNavigation/latihan/daftarWisata.dart';
 import 'package:movie_apps/ui/tabNavigation/latihan/loginScreen.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget splashScreen = SplashScreenView(
-      navigateRoute: LoginScreen(),
+      navigateRoute: ContohAPI(),
       duration: 3000,
       text: 'Welcome to My App',
       textStyle: TextStyle(fontSize: 30, color: Colors.white),
