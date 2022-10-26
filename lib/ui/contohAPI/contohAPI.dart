@@ -16,7 +16,7 @@ class ContohAPI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Belajar GET Http'),
+        title: Text('Belajar GET HTTP'),
         centerTitle: true,
         backgroundColor: Colors.blueAccent,
       ),
@@ -30,20 +30,22 @@ class ContohAPI extends StatelessWidget {
                   padding: EdgeInsets.all(10),
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return ListTile(
-                      leading: CircleAvatar(
-                        radius: 30,
-                        backgroundImage: NetworkImage(
-                          snapshot.data[index]['avatar'],
+                    return Card(
+                      child: ListTile(
+                        leading: CircleAvatar(
+                          radius: 30,
+                          backgroundImage: NetworkImage(
+                            snapshot.data[index]['avatar'],
+                          ),
                         ),
-                      ),
-                      title: Text(
-                        snapshot.data[index]['first_name'] +
-                            ' ' +
-                            snapshot.data[index]['last_name'],
-                      ),
-                      subtitle: Text(
-                        snapshot.data[index]['email'],
+                        title: Text(
+                          snapshot.data[index]['first_name'] +
+                              ' ' +
+                              snapshot.data[index]['last_name'],
+                        ),
+                        subtitle: Text(
+                          snapshot.data[index]['email'],
+                        ),
                       ),
                     );
                   },
