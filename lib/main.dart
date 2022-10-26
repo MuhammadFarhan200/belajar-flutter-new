@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:movie_apps/ui/contohAPI/albumScreen.dart';
-import 'package:movie_apps/ui/contohAPI/contohAPI.dart';
 import 'package:splash_screen_view/SplashScreenView.dart';
 
 void main() {

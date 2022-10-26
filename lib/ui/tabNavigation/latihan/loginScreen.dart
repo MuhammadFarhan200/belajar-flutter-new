@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:movie_apps/ui/tabNavigation/latihan/homeScreen.dart';
 import 'package:movie_apps/ui/tabNavigation/latihan/menuScreen.dart';
 
 class LoginScreen extends StatefulWidget {
